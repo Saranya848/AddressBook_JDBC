@@ -6,7 +6,7 @@ public class Person {
 	private String address;
 	private String city;
 	private String state;
-	private int zip;
+	private String zip;
 	private String phoneno;
 	private String email;
 
@@ -18,18 +18,18 @@ public class Person {
 	 * @param address   - contact address of the person
 	 * @param city      - city of the person belongs
 	 * @param state     - state of the person belongs to.
-	 * @param zip       - pincode
+	 * @param zip2       - pincode
 	 * @param phoneno   - contact number of the person
 	 * @param email     - contact mail id of the person
 	 */
-	public Person(String firstname, String lastname, String address, String city, String state, int zip, String phoneno,
+	public Person(String firstname, String lastname, String address, String city, String state, String zip2, String phoneno,
 			String email) {
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.address = address;
 		this.city = city;
 		this.state = state;
-		this.zip = zip;
+		this.zip = zip2;
 		this.phoneno = phoneno;
 		this.email = email;
 	}
@@ -79,11 +79,11 @@ public class Person {
 		this.state = state;
 	}
 
-	public int getPincode() {
+	public String getPincode() {
 		return zip;
 	}
 
-	public void setPincode(int zip) {
+	public void setPincode(String zip) {
 		this.zip = zip;
 	}
 
