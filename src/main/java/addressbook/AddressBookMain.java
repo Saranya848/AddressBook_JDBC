@@ -82,4 +82,14 @@ public class AddressBookMain {
 
 	}
 
+	public AddressBookMain get(String existingBook) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void duplicateCheck() {
+		// TODO Auto-generated method stub
+
+	}
+
 }

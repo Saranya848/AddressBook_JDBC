@@ -1,13 +1,15 @@
 package addressbook;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Contacts {
 
 	ArrayList<Person> person;
 	MultipleAddressBook multipleAddressBook = new MultipleAddressBook();
-
+	Map<String, AddressBookMain> addressbook = new HashMap<String, AddressBookMain>();
 	// public Contacts() {
 	// person = new ArrayList<Person>();
 	// }
@@ -118,6 +120,21 @@ public class Contacts {
 			findContacts();
 		}
 		return temp;
+	}
+
+	/**
+	 * Method to edit contact in specific Address Book Took user input to search
+	 * through HashMap If found: calling editPerson Method
+	 */
+	public void duplicateContacts() {
+		System.out.println("Enter name of address book you want to edit contact in");
+		String existingBook = sc.next();
+		AddressBookMain addressBook = addressbook.get(existingBook);
+		if (addressBook == null) {
+			System.out.println("No adress book exists with given name");
+		} else {
+			addressBook.get(existingBook).duplicateCheck();
+		}
 	}
 
 	/**

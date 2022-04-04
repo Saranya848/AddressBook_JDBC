@@ -18,12 +18,12 @@ public class Person {
 	 * @param address   - contact address of the person
 	 * @param city      - city of the person belongs
 	 * @param state     - state of the person belongs to.
-	 * @param zip2       - pincode
+	 * @param zip2      - pincode
 	 * @param phoneno   - contact number of the person
 	 * @param email     - contact mail id of the person
 	 */
-	public Person(String firstname, String lastname, String address, String city, String state, String zip2, String phoneno,
-			String email) {
+	public Person(String firstname, String lastname, String address, String city, String state, String zip2,
+			String phoneno, String email) {
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.address = address;
