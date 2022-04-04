@@ -197,9 +197,15 @@ public class Contacts {
 				multipleAddressBook.deletingContacts();
 				break;
 			case 5:
+				multipleAddressBook.duplicateContacts();
+				break;
+			case 6:
+				multipleAddressBook.searchcrs();
+				break;
+			case 7:
 				multipleAddressBook.printAddressBook();
 				break;
-			case 6: {
+			case 8: {
 				System.out.println("You are out of the address book system");
 			}
 

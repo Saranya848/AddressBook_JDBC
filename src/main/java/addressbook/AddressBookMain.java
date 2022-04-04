@@ -1,5 +1,6 @@
 package addressbook;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class AddressBookMain {
@@ -11,8 +12,8 @@ public class AddressBookMain {
 		System.out.println("Enter Choice for data : ");
 		while (true) {
 			System.out.println("Enter 1 To New Contact \n" + "Enter 2 To add New Contact \n"
-					+ "Enter 3 To Find Contact \n" + "Enter 4 To Edit Contact \n" + "Enter 5 To Delete Contact \n"
-					+ "Enter 6 To Display Contact \n" + "Enter 0 To Exit");
+					+ "Enter 3 To Find Contact \n" + "Enter 4 To Duplicate Contact \n" + "Enter 5 To Edit Contact \n"
+					+ "Enter 6 To Delete Contact \n" + "Enter 7 To Display Contact \n" + "Enter 0 To Exit");
 			Scanner scanner = new Scanner(System.in);
 			int choice = scanner.nextInt();
 			switch (choice) {
@@ -34,27 +35,32 @@ public class AddressBookMain {
 				 */
 				contacts.findContacts();
 				break;
-
 			case 4:
+				/**
+				 * Calling duplicateContacts() method for checkout data
+				 */
+				contacts.duplicateContacts();
+				break;
+			case 5:
 				/**
 				 * Calling editContact() method for updated data
 				 */
 				contacts.editContact();
 				break;
-			case 5:
+			case 6:
 				/**
 				 * Calling deleteContact() method for deleting person's data
 				 */
 				contacts.deleteContact();
 				break;
-			case 6:
+			case 7:
 				/**
 				 * Calling addMultipleContact() method for Multiple person's data
 				 */
 				contacts.addMultiplePerson();
 				break;
 
-			case 7:
+			case 8:
 				/**
 				 * Calling displayContact() method for Display person's data
 				 */
@@ -90,6 +96,11 @@ public class AddressBookMain {
 	public void duplicateCheck() {
 		// TODO Auto-generated method stub
 
+	}
+
+	public static List<Person> getPerson() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
