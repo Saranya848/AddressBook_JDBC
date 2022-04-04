@@ -49,13 +49,37 @@ public class AddressBookMain {
 				break;
 			case 6:
 				/**
-				 * Calling displayContact() method for deleting person's data
+				 * Calling addMultipleContact() method for Multiple person's data
+				 */
+				contacts.addMultiplePerson();
+				break;
+
+			case 7:
+				/**
+				 * Calling displayContact() method for Display person's data
 				 */
 				contacts.display();
 				break;
 			}
 			scanner.close();
 		}
+	}
+
+	public char[] person;
+
+	public void newcontact() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void editPerson() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void deletePerson() {
+		// TODO Auto-generated method stub
+
 	}
 
 }

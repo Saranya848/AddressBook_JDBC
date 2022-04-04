@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Contacts {
+
 	ArrayList<Person> person;
+	MultipleAddressBook multipleAddressBook = new MultipleAddressBook();
 
 	// public Contacts() {
 	// person = new ArrayList<Person>();
@@ -156,6 +158,40 @@ public class Contacts {
 		if (editName.equals(pc1.getFirstName())) {
 			System.out.println("Deleted " + pc1.getFirstName() + " details");
 			person = null;
+		}
+	}
+
+	public void addMultiplePerson() {
+		while (true) {
+			System.out.println("Enter the option \n" + "1)To Add New Address Book\n" + "2)To Add New Contact\n"
+					+ "3)To Edit Contact" + "\n4)To Delete Contact" + "\n5)To Print Address Books\n6)Exit");
+			int option = sc.nextInt();
+			switch (option) {
+			case 1:
+				multipleAddressBook.addressBookAddition();
+				break;
+			case 2:
+				multipleAddressBook.addingContacts();
+				break;
+			case 3:
+				multipleAddressBook.editingContacts();
+				break;
+			case 4:
+				multipleAddressBook.deletingContacts();
+				break;
+			case 5:
+				multipleAddressBook.printAddressBook();
+				break;
+			case 6: {
+				System.out.println("You are out of the address book system");
+			}
+
+				break;
+			default:
+				System.out.println("invalid option");
+
+				break;
+			}
 		}
 	}
 
